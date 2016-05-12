@@ -71,6 +71,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func resetAction(sender: UIBarButtonItem) {
         self.seedInput.text = ""
         self.resultView.text = ""
+        self.leftComputedView.text = ""
+        self.rightComputedView.text = ""
         self.computedSeriesLabel.hidden = true
         self.fromStorageLabel.hidden = true
         self.seedInput.resignFirstResponder()
