@@ -24,32 +24,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.fiboLabel.text = "Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,..."
     }
     
-    // Return the nth fibonacci number: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,...
-    func fibonacci(n:Int) -> Double {
-        if let result = fibonacciMemo[n] {
-            var msg = self.leftComputedView.text as String
-            msg += "\(result)\n"
-            self.leftComputedView.text = msg
-            return result
-        }
-        let result = n < 2 ? Double(n):fibonacci(n-1) + fibonacci(n-2)
-        var msg = self.rightComputedView.text as String
-        msg += "\(result)\n"
-        self.rightComputedView.text = msg
-        fibonacciMemo[n] = result
-        self.computedSeriesLabel.hidden = false
-        self.fromStorageLabel.hidden = false
-        return result
+    override func viewDidLayoutSubviews() {
+        self.leftComputedView.textColor = UIColor.brownColor()
+        self.rightComputedView.textColor = UIColor.brownColor()
     }
     
-    // -----------------------------------------------------------------------------------------------------
-    
-    func doFibonacci(seed:Int) {
-        let msg = "Input: \(seed)\nFibonacci Result: \(fibonacci(seed))"
-        self.resultView.text = msg
-    }
-    
-    // -----------------------------------------------------------------------------------------------------
+      // -----------------------------------------------------------------------------------------------------
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()

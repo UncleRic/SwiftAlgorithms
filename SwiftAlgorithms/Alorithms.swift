@@ -7,16 +7,33 @@
 
 import Foundation
 
-func putZeroesToLeft(inout nums: [Int]) {
-    assert(!nums.isEmpty)
-
-    var firstAvailableSlot = (nums[0] == 0) ? 1: 0
-  
-    for index in firstAvailableSlot..<nums.count {
-        if nums[index] == 0 {
-            swap(&nums[firstAvailableSlot], &nums[index])
-            firstAvailableSlot += 1
+extension ViewController {
+    // var fibonacciMemo = [Int:Double]()
+    
+    // Return the nth fibonacci number: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,...
+    func fibonacci(n:Int) -> Double {
+        if let result = fibonacciMemo[n] {
+            var msg = self.leftComputedView.text as String
+            msg += "\(result)\n"
+            self.leftComputedView.text = msg
+            return result
         }
-        
+        let result = n < 2 ? Double(n):fibonacci(n-1) + fibonacci(n-2)
+        var msg = self.rightComputedView.text as String
+        msg += "\(result)\n"
+        self.rightComputedView.text = msg
+        fibonacciMemo[n] = result
+        self.computedSeriesLabel.hidden = false
+        self.fromStorageLabel.hidden = false
+        return result
     }
+    // -----------------------------------------------------------------------------------------------------
+    
+    func doFibonacci(seed:Int) {
+        let msg = "Input: \(seed)\nFibonacci Result: \(fibonacci(seed))"
+        self.resultView.text = msg
+    }
+    
 }
+
+

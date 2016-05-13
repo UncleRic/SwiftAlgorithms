@@ -151,11 +151,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kFN-Bp-cyW" userLabel="Computed Stack View">
                                 <rect key="frame" x="0.0" y="211" width="300" height="128"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT4-Rp-PZC" userLabel="Left Computed View">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT4-Rp-PZC" userLabel="Left Computed View">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="ops-h4-afk"/>
                                         </constraints>
+                                        <color key="textColor" red="0.43817165489999998" green="0.29959824680000002" blue="0.098423570390000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
@@ -169,13 +170,14 @@
                                             </mask>
                                         </variation>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-em-s9y" userLabel="Right Computed View">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-em-s9y" userLabel="Right Computed View">
                                         <rect key="frame" x="160" y="0.0" width="140" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="DIR-4K-sKC">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="140"/>
                                             </constraint>
                                         </constraints>
+                                        <color key="textColor" red="0.43817165489999998" green="0.29959824680000002" blue="0.098423570390000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
