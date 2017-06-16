@@ -11,7 +11,7 @@ extension ViewController {
     // var fibonacciMemo = [Int:Double]()
     
     // Return the nth fibonacci number: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,...
-    func fibonacci(n:Int) -> Double {
+    func fibonacci(_ n:Int) -> Double {
         if let result = fibonacciMemo[n] {
             var msg = self.leftComputedView.text as String
             msg += "\(result)\n"
@@ -23,13 +23,13 @@ extension ViewController {
         msg += "\(result)\n"
         self.rightComputedView.text = msg
         fibonacciMemo[n] = result
-        self.computedSeriesLabel.hidden = false
-        self.fromStorageLabel.hidden = false
+        self.computedSeriesLabel.isHidden = false
+        self.fromStorageLabel.isHidden = false
         return result
     }
     // -----------------------------------------------------------------------------------------------------
     
-    func doFibonacci(seed:Int) {
+    func doFibonacci(_ seed:Int) {
         let msg = "Input: \(seed)\nFibonacci Result: \(fibonacci(seed))"
         self.resultView.text = msg
     }

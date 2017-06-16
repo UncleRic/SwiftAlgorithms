@@ -25,13 +25,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLayoutSubviews() {
-        self.leftComputedView.textColor = UIColor.brownColor()
-        self.rightComputedView.textColor = UIColor.brownColor()
+        self.leftComputedView.textColor = UIColor.brown
+        self.rightComputedView.textColor = UIColor.brown
     }
     
       // -----------------------------------------------------------------------------------------------------
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if let seedString = textField.text {
             if seedString.isEmpty {
@@ -48,19 +48,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // -----------------------------------------------------------------------------------------------------
     
-    @IBAction func resetAction(sender: UIBarButtonItem) {
+    @IBAction func resetAction(_ sender: UIBarButtonItem) {
         self.seedInput.text = ""
         self.resultView.text = ""
         self.leftComputedView.text = ""
         self.rightComputedView.text = ""
-        self.computedSeriesLabel.hidden = true
-        self.fromStorageLabel.hidden = true
+        self.computedSeriesLabel.isHidden = true
+        self.fromStorageLabel.isHidden = true
         self.seedInput.resignFirstResponder()
     }
     
     // -----------------------------------------------------------------------------------------------------
     
-    @IBAction func exitAction(sender: UIBarButtonItem) {
+    @IBAction func exitAction(_ sender: UIBarButtonItem) {
         exit(0);
     }
     
